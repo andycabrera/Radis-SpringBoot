@@ -1,0 +1,9 @@
+com\ejemplos\redis\springrediscache\SpringRedisCacheApplication.class
+com\ejemplos\redis\springrediscache\service\IUserServices.class
+com\ejemplos\redis\springrediscache\repository\UserRepository.class
+com\ejemplos\redis\springrediscache\service\UserService.class
+com\ejemplos\redis\springrediscache\repository\UserPageRepository.class
+com\ejemplos\redis\springrediscache\controller\CacheController.class
+com\ejemplos\redis\springrediscache\entities\User.class
+com\ejemplos\redis\springrediscache\config\CacheConfig.class
+com\ejemplos\redis\springrediscache\config\RedisConfig.class

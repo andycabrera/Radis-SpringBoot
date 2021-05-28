@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ejemplos.redis.springrediscache.SpringRedisCacheApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.153 s - in com.ejemplos.redis.springrediscache.SpringRedisCacheApplicationTests
