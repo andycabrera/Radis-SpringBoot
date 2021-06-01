@@ -1,8 +1,11 @@
 package com.ejemplos.redis.springrediscache.controller;
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 import com.ejemplos.redis.springrediscache.entities.User;
 import com.ejemplos.redis.springrediscache.service.UserService;
+import com.ejemplos.redis.springrediscache.tools.UserSearchCriteria;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,8 +31,24 @@ public class UserController {
     
     @PostMapping
     public User save(@RequestBody User user){
-    	System.out.println("The user is : " + user);
         return this.userService.save(user);
+    }
+
+    @GetMapping("/filtered")
+    public List<User> retrieveUsers(
+            @RequestParam(required = false) Optional<Float> minSalaryRank,
+            @RequestParam(required = false) Optional<Float> maxSalaryRank,
+            @RequestParam(required = false) Optional<Integer> age,
+            @RequestParam(name = "name", required = false) Set<String> names) {
+
+        UserSearchCriteria searchCriteria = UserSearchCriteria.builder()
+                .minSalaryRate(minSalaryRank)
+                .maxSalaryRate(maxSalaryRank)
+                .age(age)
+                .names(names)
+                .build();
+
+        return userService.retrieveUsers(searchCriteria);
     }
 
     @GetMapping("/pageable")

@@ -4,6 +4,9 @@ import com.ejemplos.redis.springrediscache.config.CacheConfig;
 import com.ejemplos.redis.springrediscache.entities.User;
 import com.ejemplos.redis.springrediscache.repository.UserPageRepository;
 import com.ejemplos.redis.springrediscache.repository.UserRepository;
+import com.ejemplos.redis.springrediscache.tools.UserSearchCriteria;
+import com.ejemplos.redis.springrediscache.tools.UserSpecifications;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -12,6 +15,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,9 +30,14 @@ public class UserService implements IUserServices{
         this.userRepository = userRepository;
         this.userPageRepository = userPageRepository;
     }
+    
+    public List<User> retrieveUsers(UserSearchCriteria searchCriteria) {
+        Specification<User> userSpecifications = UserSpecifications.createUserSpecifications(searchCriteria);
+        return this.userRepository.findAll(userSpecifications);
+    }
 
     @Override
-    @Cacheable(cacheNames = CacheConfig.USERS_CACHE, key = "#pageNo + #pageSize", unless = "#result == null")
+    @Cacheable(cacheNames = CacheConfig.USERS_CACHE, key = "'andres' + #pageNo + #pageSize", unless = "#result == null")
     public List<User> findPaginated(int pageNo, int pageSize) {
         Pageable paging = PageRequest.of(pageNo, pageSize);
         Page<User> pagedResult = userPageRepository.findAllUsers(paging);
@@ -39,7 +48,7 @@ public class UserService implements IUserServices{
     	return this.userRepository.save(user);
     }
 
-    @Cacheable(cacheNames = CacheConfig.USERS_CACHE, key= "880", unless = "#result == null")
+    @Cacheable(cacheNames = CacheConfig.USERS_CACHE, key= "0", unless = "#result == null")
     public List<User> findAll() {
         return this.userRepository.findAllUsers();
     }

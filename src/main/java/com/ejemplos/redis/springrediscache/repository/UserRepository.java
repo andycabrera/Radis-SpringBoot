@@ -6,13 +6,15 @@ import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
 
-
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.lang.Nullable;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Long> ,JpaSpecificationExecutor<User>{
 
 	@Modifying(clearAutomatically=true, flushAutomatically = true)
 	@Transactional
@@ -31,4 +33,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     	System.out.println("Call repository to get all users");
     	return this.findAll();
     }
+
+	List<User> findAll(@Nullable Specification<User> spec);
 }

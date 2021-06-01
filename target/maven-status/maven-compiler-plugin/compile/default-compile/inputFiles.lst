@@ -1,10 +1,13 @@
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\entities\User.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\service\IUserServices.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\service\UserService.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\controller\UserController.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\controller\CacheController.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\SpringRedisCacheApplication.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\config\RedisConfig.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\repository\UserPageRepository.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\config\CacheConfig.java
-C:\Users\Andrés Cabrera\Documents\Development\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\repository\UserRepository.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\controller\UserController.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\service\UserService.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\tools\MetaModels\User_.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\entities\User.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\service\IUserServices.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\config\CacheConfig.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\repository\UserPageRepository.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\tools\UserSearchCriteria.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\SpringRedisCacheApplication.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\controller\CacheController.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\repository\UserRepository.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\config\RedisConfig.java
+C:\Users\ancabrera\Documents\redis\Radis-SpringBoot\src\main\java\com\ejemplos\redis\springrediscache\tools\UserSpecifications.java
